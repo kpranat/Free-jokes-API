@@ -1,6 +1,24 @@
 
 # 😂 Free Jokes API
 
+## ⚡ Quick Start
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/yourusername/free-jokes-api.git
+cd free-jokes-api
+
+# 2. Install required Python packages
+pip install -r requirements.txt
+
+# 3. Run the Flask app
+python app.py
+
+# Access it at:
+# http://localhost:5000/jokes
+```
+
+
 A simple and fun **Flask-based API** that lets users view and add jokes.  
 Deployed live at 👉 [https://free-jokes-api.onrender.com](https://free-jokes-api.onrender.com)
 
@@ -108,7 +126,7 @@ Go to: `http://localhost:5000/jokes`
 | Setting         | Value                          |
 |----------------|--------------------------------|
 | Build Command  | `pip install -r requirements.txt` |
-| Start Command  | `python app.py`                |
+| Start Command  | `gunicorn app:app`             |
 | Runtime        | Python 3.x                     |
 
 ✅ Done! Render gives you a public link.
