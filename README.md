@@ -126,7 +126,7 @@ Go to: `http://localhost:5000/jokes`
 | Setting         | Value                          |
 |----------------|--------------------------------|
 | Build Command  | `pip install -r requirements.txt` |
-| Start Command  | `gunicorn app:app`             |
+| Start Command  | `python app.py`             |
 | Runtime        | Python 3.x                     |
 
 ✅ Done! Render gives you a public link.
