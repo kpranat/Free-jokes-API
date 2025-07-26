@@ -1,6 +1,7 @@
 from flask import Flask,jsonify,request
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
+import os
 
 app=Flask(__name__)
 
@@ -59,7 +60,7 @@ sample_data={"jokes": [
     ]
 }
 
-@app.route('/jokes',methods = ["POST","GET"])
+@app.route('/',methods = ["POST","GET"])
 @limiter.limit("10 requests per minute")
 def sample_get_items():
     if request.method=="GET":
@@ -87,6 +88,10 @@ def sample_get_items():
 
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 
