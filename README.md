@@ -166,4 +166,4 @@ MIT License — use it freely!
 
 ## 👋 Try It Live!
 
-▶️ [https://free-jokes-api.onrender.com/jokes](https://free-jokes-api.onrender.com/jokes)
+▶️ [https://free-jokes-api.onrender.com](https://free-jokes-api.onrender.com)
