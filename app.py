@@ -11,7 +11,8 @@ def get_ip():
 
 limiter = Limiter(
     app,
-    key_func=get_ip,
+    key_func=get_ip,  # Use the function above
+    storage_uri="redis:https://free-jokes-api.onrender.com",  # Or your Render Redis URL
     default_limits=["100 per hour"]
 )
 
