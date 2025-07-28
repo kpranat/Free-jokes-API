@@ -3,11 +3,13 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import os
 
-app=Flask(__name__)
-
 def get_ip():
     # Get the first IP in X-Forwarded-For, if present; else fallback to remote_addr
     return request.headers.get('X-Forwarded-For', request.remote_addr)
+
+
+app=Flask(__name__)
+
 
 limiter = Limiter(
     app,
