@@ -68,7 +68,7 @@ sample_data={"jokes": [
 }
 
 @app.route('/',methods = ["POST","GET"])
-@limiter.limit("10 requests per minute")
+@limiter.limit("10  per minute")
 def sample_get_items():
     if request.method=="GET":
         return jsonify(sample_data)
