@@ -5,9 +5,13 @@ import os
 
 app=Flask(__name__)
 
+def get_ip():
+    # Get the first IP in X-Forwarded-For, if present; else fallback to remote_addr
+    return request.headers.get('X-Forwarded-For', request.remote_addr)
+
 limiter = Limiter(
-    get_remote_address,
-    app=app,
+    app,
+    key_func=get_ip,
     default_limits=["100 per hour"]
 )
 
