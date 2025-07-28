@@ -65,7 +65,7 @@ sample_data={"jokes": [
 def sample_get_items():
     if request.method=="GET":
         return jsonify(sample_data)
-    else:
+    elif request.method=="POST":
         data=request.get_json()
 
         if not data or "punchline" not in data:
